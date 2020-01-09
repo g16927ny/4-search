@@ -1,0 +1,908 @@
+h1  {
+    color: #FFFFFF;
+    font-family: 'M PLUS 1p', sans-serif;
+    margin-left: 20px;
+}
+
+div.kara  {
+    color: #FF6699;
+    background: -webkit-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+    background: -webkit-background-clip: text;
+    background: -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+p.sentence  {
+    color: #FF6699;
+    background: -webkit-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+    background: -webkit-background-clip: text;
+    background: -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+h4  {
+    display: inline;
+    color: #FF6699;
+    background: -webkit-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+    background: -webkit-background-clip: text;
+    background: -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+
+
+
+div.contentstop{
+  margin-left: 30px;
+}
+div.contentsroute{
+  margin-left: 70px;
+}
+p.fee{
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+p.routeleft{
+  top: -10px;
+  display: inline;
+  margin-left: 75px;
+}
+p.tt1r{
+  display: inline;
+  margin-left: 75px;
+}
+/*東京駅から東京ドーム*/
+hr.tt1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 42%, #FF6600 42%, #FF6600 100%);
+  background: linear-gradient(right, #CCCC00 42%,#FF6600 42%, #FF6600 100%);
+  background: -moz-linear-gradient(right, #CCCC00 42%,#FF6600 42%, #FF6600 100%);
+  background: -o-linear-gradient(right, #CCCC00 42%,#FF6600 42%, #FF6600 100%);
+  width: 270px;
+  border: none;
+  text-align: center;
+}
+
+hr.tt2 {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #F62E36;
+  width: 480px;
+  border: none;
+}
+hr.tm {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #990000;
+  width: 1065px;
+  border: none;
+}
+hr.tk1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #B6007A 40%, #FF6600 40%, #FF6600 100%);
+  background: linear-gradient(right, #B6007A 40%,#FF6600 40%, #FF6600 100%);
+  background: -moz-linear-gradient(right, #B6007A 40%,#FF6600 40%, #FF6600 100%);
+  background: -o-linear-gradient(right, #B6007A 40%,#FF6600 40%, #FF6600 100%);
+  width: 525px;
+  border: none;
+  text-align: center;
+}
+p.tk1{
+  display: inline;
+  margin-left: 240px;
+}
+
+hr.tk2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 29%, #FF6600 29%, #FF6600 100%);
+  background: linear-gradient(right, #CCCC00 29%,#FF6600 29%, #FF6600 100%);
+  background: -moz-linear-gradient(right, #CCCC00 29%,#FF6600 29%, #FF6600 100%);
+  background: -o-linear-gradient(right, #CCCC00 29%,#FF6600 29%, #FF6600 100%);
+  width: 675px;
+  border: none;
+  text-align: center;
+}
+p.tk2{
+  display: inline;
+  margin-left: 410px;
+}
+
+hr.tb1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #8F76D6 68%, #F62E36 68%, #F62E36 100%);
+  background: linear-gradient(right, #8F76D6 68%,#F62E36 68%, #F62E36 100%);
+  background: -moz-linear-gradient(right, #8F76D6 68%,#F62E36 68%, #F62E36 100%);
+  background: -o-linear-gradient(right, #8F76D6 68%,#F62E36 68%, #F62E36 100%);
+  width: 275px;
+  border: none;
+  text-align: center;
+}
+p.tb1{
+  display: inline;
+  margin-left: 30px;
+}
+hr.tb2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #00A7DB 68%, #F62E36 68%, #F62E36 100%);
+  background: linear-gradient(right, #00A7DB 68%,#F62E36 68%, #F62E36 100%);
+  background: -moz-linear-gradient(right, #00A7DB 68%,#F62E36 68%, #F62E36 100%);
+  background: -o-linear-gradient(right, #00A7DB 68%,#F62E36 68%, #F62E36 100%);
+  width: 275px;
+  border: none;
+  text-align: center;
+}
+p.tb2{
+  display: inline;
+  margin-left: 30px;
+}
+hr.tf {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #66CC33;
+  width: 105px;
+  border: none;
+}
+hr.tr1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 52%, #66CC33 52%, #66CC33 100%);
+  background: linear-gradient(right, #CCCC00 52%,#66CC33 52%, #66CC33 100%);
+  background: -moz-linear-gradient(right, #CCCC00 52%,#66CC33 52%, #66CC33 100%);
+  background: -o-linear-gradient(right, #CCCC00 52%,#66CC33 52%, #66CC33 100%);
+  width: 310px;
+  border: none;
+  text-align: center;
+}
+p.tr1{
+  display: inline;
+  margin-left: 100px;
+}
+hr.st1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #000099 78%, #CC6666 78%, #CC6666 88%, #FF3366 88%, #FF3366 100%);
+  background: linear-gradient(right, #000099 78%,#CC6666 78%, #CC6666 88%, #FF3366 88%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #000099 78%,#CC6666 78%, #CC6666 88%, #FF3366 88%, #FF3366 100%);
+  background: -o-linear-gradient(right, #000099 78%,#CC6666 78%, #CC6666 88%, #FF3366 88%, #FF3366 100%);
+  width: 720px;
+  border: none;
+  text-align: center;
+}
+p.st1{
+  display: inline;
+  margin-left: 25px;
+}
+p.st11{
+  display: inline;
+  margin-left: 35px;
+}
+
+hr.st2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 29%, #3399CC 29%, #3399CC 100%);
+  background: linear-gradient(right, #CCCC00 29%,#3399CC 29%, #3399CC 100%);
+  background: -moz-linear-gradient(right, #CCCC00 29%,#3399CC 29%, #3399CC 100%);
+  background: -o-linear-gradient(right, #CCCC00 29%,#3399CC 29%, #3399CC 100%);
+  width: 690px;
+  border: none;
+  text-align: center;
+}
+p.st2{
+  display: inline;
+  margin-left: 420px;
+}
+hr.sm {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #990000 88%, #0066CC 88%, #0066CC 100%);
+  background: linear-gradient(right, #990000 88%,#0066CC 88%, #0066CC 100%);
+  background: -moz-linear-gradient(right, #990000 88%,#0066CC 88%, #0066CC 100%);
+  background: -o-linear-gradient(right, #990000 88%,#0066CC 88%, #0066CC 100%);
+  width: 1180px;
+  border: none;
+  text-align: center;
+}
+p.sm{
+  display: inline;
+  margin-left: 100px;
+}
+hr.sk1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #000099 69%, #CC6666 69%, #CC6666 88%, #FF3366 88%, #FF3366 100%);
+  background: linear-gradient(right, #000099 69%,#CC6666 69%, #CC6666 88%, #FF3366 88%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #000099 69%,#CC6666 69%, #CC6666 88%, #FF3366 88%, #FF3366 100%);
+  background: -o-linear-gradient(right, #000099 69%,#CC6666 69%, #CC6666 88%, #FF3366 88%, #FF3366 100%);
+  width: 715px;
+  border: none;
+  text-align: center;
+}
+p.sk1{
+  display: inline;
+  margin-left: 25px;
+}
+p.sk11{
+  display: inline;
+  margin-left: 65px;
+}
+hr.sk2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #B6007A 23%, #66CC33 23%, #66CC33 100%);
+  background: linear-gradient(right, #B6007A 23%,#66CC33 23%, #66CC33 100%);
+  background: -moz-linear-gradient(right, #B6007A 23%,#66CC33 23%, #66CC33 100%);
+  background: -o-linear-gradient(right, #B6007A 23%,#66CC33 23%, #66CC33 100%);
+  width: 630px;
+  border: none;
+  text-align: center;
+}
+p.sk2{
+  display: inline;
+  margin-left: 440px;
+}
+hr.sk3 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 20%, #66CC33 20%, #66CC33 100%);
+  background: linear-gradient(right, #CCCC00 20%,#66CC33 20%, #66CC33 100%);
+  background: -moz-linear-gradient(right, #CCCC00 20%,#66CC33 20%, #66CC33 100%);
+  background: -o-linear-gradient(right, #CCCC00 20%,#66CC33 20%, #66CC33 100%);
+  width: 605px;
+  border: none;
+  text-align: center;
+}
+p.sk3{
+  display: inline;
+  margin-left: 440px;
+}
+hr.sb1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #00A7DB 44%, #F62E36 44%, #F62E36 62%, #FF9900 62%, #FF9900 100%);
+  background: linear-gradient(right, #00A7DB 44%,#F62E36 44%, #F62E36 62%, #FF9900 62%, #FF9900 100%);
+  background: -moz-linear-gradient(right, #00A7DB 44%,#F62E36 44%, #F62E36 62%, #FF9900 62%, #FF9900 100%);
+  background: -o-linear-gradient(right, #00A7DB 44%,#F62E36 44%, #F62E36 62%, #FF9900 62%, #FF9900 100%);
+  width: 375px;
+  border: none;
+  text-align: center;
+}
+p.sb1{
+  display: inline;
+  margin-left: 30px;
+}
+p.sb11{
+  display: inline;
+  margin-left: 30px;
+}
+hr.sb2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #8F76D6 55%, #66CC33 55%, #66CC33 100%);
+  background: linear-gradient(right, #8F76D6 55%,#66CC33 55%, #66CC33 100%);
+  background: -moz-linear-gradient(right, #8F76D6 55%,#66CC33 55%, #66CC33 100%);
+  background: -o-linear-gradient(right, #8F76D6 55%,#66CC33 55%, #66CC33 100%);
+  width: 800px;
+  border: none;
+  text-align: center;
+}
+p.sb2{
+  display: inline;
+  margin-left: 320px;
+}
+hr.sf1 {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #FF9900;
+  width: 160px;
+  border: none;
+}
+hr.sf2 {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #66CC33;
+  width: 315px;
+  border: none;
+}
+hr.sr {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 25%, #66CC33 25%, #66CC33 100%);
+  background: linear-gradient(right, #CCCC00 25%,#66CC33 25%, #66CC33 100%);
+  background: -moz-linear-gradient(right, #CCCC00 25%,#66CC33 25%, #66CC33 100%);
+  background: -o-linear-gradient(right, #CCCC00 25%,#66CC33 25%, #66CC33 100%);
+  width: 650px;
+  border: none;
+  text-align: center;
+}
+p.sr{
+  display: inline;
+  margin-left: 450px;
+}
+
+/*羽田空港国際線ターミナルから東京ドーム*/
+hr.ht {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #000099 35.5%, #CC6666 35.5%, #CC6666 39.5%, #FF3366 39.5%, #FF3366 100%);
+  background: linear-gradient(right, #000099 35.5%,#CC6666 35.5%, #CC6666 39.5%, #FF3366 39.5%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #000099 35.5%,#CC6666 35.5%, #CC6666 39.5%, #FF3366 39.5%, #FF3366 100%);
+  background: -o-linear-gradient(right, #000099 35.5%,#CC6666 35.5%, #CC6666 39.5%, #FF3366 39.5%, #FF3366 100%);
+  width: 1610px;
+  border: none;
+  text-align: center;
+}
+p.ht{
+  display: inline;
+  margin-left: 905px;
+}
+p.htt{
+  display: inline;
+  margin-left: 30px;
+}
+
+
+/*羽田空港国際線ターミナルから幕張メッセ*/
+hr.hm1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #990000 62%, #FF9900 62%, #FF9900 69%, #FF3366 69%, #FF3366 100%);
+  background: linear-gradient(right, #990000 62%,#FF9900 62%, #FF9900 69%, #FF3366 69%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #990000 62%,#FF9900 62%, #FF9900 69%, #FF3366 69%, #FF3366 100%);
+  background: -o-linear-gradient(right, #990000 62%,#FF9900 62%, #FF9900 69%, #FF3366 69%, #FF3366 100%);
+  width: 1690px;
+  border: none;
+  text-align: center;
+}
+p.hm1{
+  display: inline;
+  margin-left: 460px;
+}
+p.hm11{
+  display: inline;
+  margin-left: 30px;
+}
+hr.hm2 {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #606060;
+  width: 280px;
+  border: none;
+}
+
+/*羽田空港国際線ターミナルから幕張メッセ*/
+hr.hk1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #B6007A 41%, #CC6666 41%, #CC6666 51.5%, #FF3366 51.5%, #FF3366 100%);
+  background: linear-gradient(right, #B6007A 41%,#CC6666 41%, #CC6666 51.5%, #FF3366 51.5%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #B6007A 41%,#CC6666 41%, #CC6666 51.5%, #FF3366 51.5%, #FF3366 100%);
+  background: -o-linear-gradient(right, #B6007A 41%,#CC6666 41%, #CC6666 51.5%, #FF3366 51.5%, #FF3366 100%);
+  width: 1235px;
+  border: none;
+  text-align: center;
+}
+p.hk1{
+  display: inline;
+  margin-left: 540px;
+}
+p.hk11{
+  display: inline;
+  margin-left: 60px;
+}
+hr.hk2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 10.7%, #66CC33 10.7%, #66CC33 50.2%, #FF3366 50.2%, #FF3366 100%);
+  background: linear-gradient(right, #CCCC00 10.7%,#66CC33 10.7%, #66CC33 50.2%, #FF3366 50.2%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #CCCC00 10.7%,#66CC33 10.7%, #66CC33 50.2%, #FF3366 50.2%, #FF3366 100%);
+  background: -o-linear-gradient(right, #CCCC00 10.7%,#66CC33 10.7%, #66CC33 50.2%, #FF3366 50.2%, #FF3366 100%);
+  width: 1185px;
+  border: none;
+  text-align: center;
+}
+p.hk2{
+  display: inline;
+  margin-left: 540px;
+}
+p.hk22{
+  display: inline;
+  margin-left: 60px;
+}
+
+/*羽田空港国際線ターミナルから武道館*/
+hr.hb1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #00A7DB 18.5%, #CC6666 18.5%, #CC6666 49%, #FF3366 49%, #FF3366 100%);
+  background: linear-gradient(right, #00A7DB 18.5%,#CC6666 18.5%, #CC6666 49%, #FF3366 49%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #00A7DB 18.5%,#CC6666 18.5%, #CC6666 49%, #FF3366 49%, #FF3366 100%);
+  background: -o-linear-gradient(right, #00A7DB 18.5%,#CC6666 18.5%, #CC6666 49%, #FF3366 49%, #FF3366 100%);
+  width: 1297px;
+  border: none;
+  text-align: center;
+}
+p.hb1{
+  display: inline;
+  margin-left: 610px;
+}
+p.hb11{
+  display: inline;
+  margin-left: 320px;
+}
+hr.hb2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #009900 21%, #FFFFFF 21%, #FFFFFF 27%, #CC6666 27%, #CC6666 60.5%, #FF3366 60.5%, #FF3366 100%);
+  background: linear-gradient(right, #009900 21%,#FFFFFF 21%, #FFFFFF 27%, #CC6666 27%, #CC6666 60.5%, #FF3366 60.5%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #009900 21%,#FFFFFF 21%, #FFFFFF 27%, #CC6666 27%, #CC6666 60.5%, #FF3366 60.5%, #FF3366 100%);
+  background: -o-linear-gradient(right, #009900 21%,#FFFFFF 21%, #FFFFFF 27%, #CC6666 27%, #CC6666 60.5%, #FF3366 60.5%, #FF3366 100%);
+  width: 1670px;
+  border: none;
+  text-align: center;
+}
+p.hb2{
+  display: inline;
+  margin-left: 610px;
+}
+p.hb22{
+  display: inline;
+  margin-left: 580px;
+}
+
+/*羽田空港国際線ターミナルから国際フォーラム*/
+hr.hf1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #0066CC 19%, #FF3366 19%, #FF3366 100%);
+  background: linear-gradient(right, #0066CC 19%,#FF3366 19%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #0066CC 19%,#FF3366 19%, #FF3366 100%);
+  background: -o-linear-gradient(right, #0066CC 19%,#FF3366 19%, #FF3366 100%);
+  width: 728px;
+  border: none;
+  text-align: center;
+}
+p.hf1{
+  display: inline;
+  margin-left: 530px;
+}
+hr.hf2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #66CC33 37%, #FF3366 37%, #FF3366 100%);
+  background: linear-gradient(right, #66CC33 37%,#FF3366 37%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #66CC33 37%,#FF3366 37%, #FF3366 100%);
+  background: -o-linear-gradient(right, #66CC33 37%,#FF3366 37%, #FF3366 100%);
+  width: 790px;
+  border: none;
+  text-align: center;
+}
+p.hf2{
+  display: inline;
+  margin-left: 440px;
+}
+
+
+/*羽田空港国際線ターミナルから両国国技館*/
+hr.hr1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 15%, #66CC33 15%, #66CC33 56%, #FF3366 56%, #FF3366 100%);
+  background: linear-gradient(right, #CCCC00 15%,#66CC33 15%, #66CC33 56%, #FF3366 56%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #CCCC00 15%,#66CC33 15%, #66CC33 56%, #FF3366 56%, #FF3366 100%);
+  background: -o-linear-gradient(right, #CCCC00 15%,#66CC33 15%, #66CC33 56%, #FF3366 56%, #FF3366 100%);
+  width: 1130px;
+  border: none;
+  text-align: center;
+}
+p.hr1{
+  display: inline;
+  margin-left: 445px;
+}
+p.hr11{
+  display: inline;
+  margin-left: 420px;
+}
+hr.hr2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #B6007A 47.5%, #CC6666 47.5%, #CC6666 57.3%, #FF3366 57.3%, #FF3366 100%);
+  background: linear-gradient(right, #B6007A 47.5%,#CC6666 47.5%, #CC6666 57.3%, #FF3366 57.3%, #FF3366 100%);
+  background: -moz-linear-gradient(right, #B6007A 47.5%,#CC6666 47.5%, #CC6666 57.3%, #FF3366 57.3%, #FF3366 100%);
+  background: -o-linear-gradient(right, #B6007A 47.5%,#CC6666 47.5%, #CC6666 57.3%, #FF3366 57.3%, #FF3366 100%);
+  width: 1325px;
+  border: none;
+  text-align: center;
+}
+p.hr2{
+  display: inline;
+  margin-left: 505px;
+}
+p.hr22{
+  display: inline;
+  margin-left: 65px;
+}
+
+/*成田空港駅から東京ドーム*/
+hr.nt1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 27.5%, #66CC33 27.5%, #66CC33 65.3%, #000066 65.3%, #000066 100%);
+  background: linear-gradient(right, #CCCC00 27.5%,#66CC33 27.5%, #66CC33 65.3%, #000066 65.3%, #000066 100%);
+  background: -moz-linear-gradient(right, #CCCC00 27.5%,#66CC33 27.5%, #66CC33 65.3%, #000066 65.3%, #000066 100%);
+  background: -o-linear-gradient(right, #CCCC00 27.5%,#66CC33 27.5%, #66CC33 65.3%, #000066 65.3%, #000066 100%);
+  width: 735px;
+  border: none;
+  text-align: center;
+}
+p.nt1{
+  display: inline;
+  margin-left: 105px;
+}
+p.nt11{
+  display: inline;
+  margin-left: 65px;
+}
+hr.nt2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 71%, #009966 71%,  #009966 100%);
+  background: linear-gradient(right, #CCCC00 71%,#009966 71%, #009966 100%);
+  background: -moz-linear-gradient(right, #CCCC00 71%,#009966 71%, #009966 100%);
+  background: -o-linear-gradient(right, #CCCC00 71%,#009966 71%, #009966 100%);
+  width: 2230px;
+  border: none;
+  text-align: center;
+}
+p.nt2{
+  display: inline;
+  margin-left: 605px;
+}
+
+/*成田空港駅から幕張メッセ*/
+hr.nm {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #606060;
+  width: 165px;
+  border: none;
+}
+
+/*成田空港駅から国立競技場*/
+hr.nk1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 53.5%, #66CC33 53.5%, #66CC33 77.5%, #000066 77.5%, #000066 100%);
+  background: linear-gradient(right, #CCCC00 53.5%,#66CC33 53.5%, #66CC33 77.5%, #000066 77.5%, #000066 100%);
+  background: -moz-linear-gradient(right, #CCCC00 53.5%,#66CC33 53.5%, #66CC33 77.5%, #000066 77.5%, #000066 100%);
+  background: -o-linear-gradient(right, #CCCC00 53.5%,#66CC33 53.5%, #66CC33 77.5%, #000066 77.5%, #000066 100%);
+  width: 1140px;
+  border: none;
+  text-align: center;
+}
+p.nk1{
+  display: inline;
+  margin-left: 155px;
+}
+p.nkk{
+  display: inline;
+  margin-left: 235px;
+}
+hr.nk2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 24.8%, #CC6666 24.8%, #CC6666 35.6%, #000066 35.6%, #000066 100%);
+  background: linear-gradient(right, #CCCC00 24.8%,#CC6666 24.8%, #CC6666 35.6%, #000066 35.6%, #000066 100%);
+  background: -moz-linear-gradient(right, #CCCC00 24.8%,#CC6666 24.8%, #CC6666 35.6%, #000066 35.6%, #000066 100%);
+  background: -o-linear-gradient(right, #CCCC00 24.8%,#CC6666 24.8%, #CC6666 35.6%, #000066 35.6%, #000066 100%);
+  width: 2780px;
+  border: none;
+  text-align: center;
+}
+p.nk2{
+  display: inline;
+  margin-left: 1730px;
+}
+p.nk22{
+  display: inline;
+  margin-left: 235px;
+}
+/*成田空港駅から武道館*/
+hr.nb1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #00A7DB 24%, #FFCC33 24%, #FFCC33 61%, #FFFFFF 61%, #FFFFFF 68.5%, #000066 68.5%, #000066 100%);
+  background: linear-gradient(right, #00A7DB 24%,#FFCC33 24%, #FFCC33 61%, #FFFFFF 61%, #FFFFFF 68.5%, #000066 68.5%, #000066 100%);
+  background: -moz-linear-gradient(right, #00A7DB 24%,#FFCC33 24%, #FFCC33 61%, #FFFFFF 61%, #FFFFFF 68.5%, #000066 68.5%, #000066 100%);
+  background: -o-linear-gradient(right, #00A7DB 24%,#FFCC33 24%, #FFCC33 61%, #FFFFFF 61%, #FFFFFF 68.5%, #000066 68.5%, #000066 100%);
+  width: 1080px;
+  border: none;
+  text-align: center;
+}
+p.nb1{
+  display: inline;
+  margin-left: 320px;
+}
+p.nb11{
+  display: inline;
+  margin-left: 295px;
+}
+hr.nb2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #00A7DB 29.5%, #FFFFFF 29.5%, #FFFFFF 33.5%,  #000066 33.5%, #000066 100%);
+  background: linear-gradient(right, #00A7DB 29.5%,#FFFFFF 29.5%, #FFFFFF 33.5%, #000066 33.5%, #000066 100%);
+  background: -moz-linear-gradient(right, #00A7DB 29.5%,#FFFFFF 29.5%, #FFFFFF 33.5%, #000066 33.5%, #000066 100%);
+  background: -o-linear-gradient(right, #00A7DB 29.5%,#FFFFFF 29.5%, #FFFFFF 33.5%, #000066 33.5%, #000066 100%);
+  width: 2330px;
+  border: none;
+  text-align: center;
+}
+p.nb2{
+  display: inline;
+  margin-left: 1590px;
+}
+
+/*成田空港駅から東京国際フォーラム*/
+hr.nf1 {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #FF0033;
+  width: 265px;
+  border: none;
+}
+hr.nf2 {
+  margin-left: 65px;
+  height: 7px;
+  background-color: #606060;
+  width: 135px;
+  border: none;
+}
+
+/*成田空港駅から両国*/
+hr.nr1 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 23.5%, #66CC33 23.5%, #66CC33 63.5%, #000066 63.5%, #000066 100%);
+  background: linear-gradient(right, #CCCC00 23.5%,#66CC33 23.5%, #66CC33 63.5%, #000066 63.5%, #000066 100%);
+  background: -moz-linear-gradient(right, #CCCC00 23.5%,#66CC33 23.5%, #66CC33 63.5%, #000066 63.5%, #000066 100%);
+  background: -o-linear-gradient(right, #CCCC00 23.5%,#66CC33 23.5%, #66CC33 63.5%, #000066 63.5%, #000066 100%);
+  width: 700px;
+  border: none;
+  text-align: center;
+}
+p.nr1{
+  display: inline;
+  margin-left: 155px;
+}
+p.nr11{
+  display: inline;
+  margin-left: 235px;
+}
+
+hr.nr2 {
+  margin-left: 65px;
+  height: 7px;
+  background: -webkit-linear-gradient(right, #CCCC00 8%, #0000FF 8%, #0000FF 43.5%, #339966 43.5%, #339966 100%);
+  background: linear-gradient(right, #CCCC00 8%,#0000FF 8%, #0000FF 43.5%, #339966 43.5%, #339966 100%);
+  background: -moz-linear-gradient(right, #CCCC00 8%,#0000FF 8%, #0000FF 43.5%, #339966 43.5%, #339966 100%);
+  background: -o-linear-gradient(right, #CCCC00 8%,#0000FF 8%, #0000FF 43.5%, #339966 43.5%, #339966 100%);
+  width: 1135px;
+  border: none;
+  text-align: center;
+}
+p.nr2{
+  display: inline;
+  margin-left: 595px;
+}
+p.nr22{
+  display: inline;
+  margin-left: 355px;
+}
+
+/*search_result*/
+ table{
+
+   margin-left: 40px;
+   color: #FF6699;
+ }
+table.th{
+color: #FF6699;
+
+padding: 20px;
+margine: 10px, 40px, 10px, 10px;
+}
+table.td{
+  padding: 20px;
+}
+.a{
+  width: 600px;
+}
+.b{
+  width: 110px;
+}
+.c{
+  width: 110px;
+
+}
+.d{
+  width: 110px;
+
+}
+.e{
+text-align: center;
+}
+.f{
+  text-align: center;
+}
+p.hotelname{
+  color: #FF6699;
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+/*スクロール*/
+div.scroll{
+  overflow-x: scroll;
+}
+ul{
+  white-space: nowrap;
+}
+
+
+
+
+input{
+    font-family: FontAwesome;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+html {
+    height: 100%;
+}
+
+.page-header {
+    margin-top: 0;
+    padding: 20px;
+    background: -webkit-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966); /* FF3.6+ */
+    background: linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+}
+
+.page-footer {
+    width: 100%;
+    bottom: 0;
+    padding: 7px;
+    position: fixed;
+    background: -webkit-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966); /* FF3.6+ */
+    background: linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966); /* W3C */
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+}
+.header-container {
+    display: block;
+  position: absolute;
+    width: 320px;
+  height: 55px;
+    left: 50%;
+  top: 50%;
+    margin-left: -160px;
+  margin-top: -87px;
+}
+
+
+/* Select style here */
+
+
+
+.cp_ipselect {
+	overflow: hidden;
+	width: 30%;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_ipselect select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl05 {
+  vertical-align: bottom;
+	position: relative;
+  border-radius: 50px;
+  background: -webkit-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+  background: -moz-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966); /* FF3.6+ */
+  background: linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+
+}
+.cp_ipselect.cp_sl05::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.8em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #ffffff;
+	pointer-events: none;
+}
+.cp_ipselect.cp_sl05 select {
+	padding: 8px 38px 8px 8px;
+	color: #ffffff;
+}
+
+/*検索ボタン*/
+.searchbtn {
+  background: -webkit-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+  background: -moz-linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966); /* FF3.6+ */
+  background: linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+  margin: 2em auto;
+  text-align: center;
+  color: #FFFFFF;
+  border-color: linear-gradient(to left, #9999FF 20%, #CC99FF 40%, #FF99FF 60%, #FF99CC 80%, #FF9966);
+  width: 80px;
+  height: 40px;
+  box-shadow: none;
+  border-radius: 50px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.click-down:active {
+  transform: translateY(2px);
+  border-bottom: none;
+}
+
+.searchbtn:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.kara div {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}

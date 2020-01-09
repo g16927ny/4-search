@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'css/search.css' %}">
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="{% static 'js/search.js' %}"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+<title>ホテル詳細</title>
+</head>
+<body>
+
+  <div class="page-header">
+  <h1>ホテル検索</h1>
+  </div>
+  <table border="0">
+    <tr>
+<th class=a>ホテル名</th>
+<th class=b>最安値</th>
+<th class=c>女性専用有無</th>
+<th class=d>サイト有無</th>
+</tr>
+{% block content %}
+
+{% for hotel in hotels %}
+
+<tr>
+        <div class="hotel">
+          <td><a href="{{ hotel.hotelurl }}">{{ hotel.hotelname }}</a></td>
+          <td>{{ hotel.hotelprice }}円〜</td>
+          <td class=e>{{ hotel.womanonly }}</td>
+          <td class=f>{{ hotel.twosites }}</td>
+        </div>
+      </tr>
+  {% endfor %}
+</table>
+
+<br><br>
+<h4><a href="/top">検索画面へ戻る</a></h4>
+<footer class="page-footer"><br></footer>
+
+{% endblock %}
+
+</body>
+</html>

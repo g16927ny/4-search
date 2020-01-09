@@ -1,0 +1,863 @@
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'css/search.css' %}">
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="{% static 'js/search.js' %}"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+  <title>ホテル検索トップ</title>
+</head>
+<body>
+
+  <div class="page-header">
+  <h1>ホテル検索</h1>
+  </div>
+
+
+
+<div class="contentstop">
+  <p class="sentence">出発地と目的地を選択してください</p>
+
+  {% block body %}
+
+
+  <form method="get" action="">
+    <div style="display: inline-block; _display: inline;" class="cp_ipselect cp_sl05">
+    <select name="depselect">
+      <option>出発地を選択</option>
+      <option value="東京駅">東京駅</option>
+      <option value="品川駅">品川駅</option>
+      <option value="羽田空港国内線ターミナル駅">羽田空港国内線ターミナル駅</option>
+      <option value="成田空港駅">成田空港駅</option>
+    </select>
+    </div>
+<div style="display: inline-block; _display: inline;" text-align="center" class="kara">  から   </div>
+    <div style="display: inline-block; _display: inline;" class="cp_ipselect cp_sl05">
+    <select name="desselect">
+      <option>目的地を選択</option>
+      <option value="東京ドーム">東京ドーム</option>
+      <option value="幕張メッセ">幕張メッセ</option>
+      <option value="国立競技場">国立競技場</option>
+      <option value="武道館">武道館</option>
+      <option value="東京国際フォーラム">東京国際フォーラム</option>
+      <option value="両国国技館">両国国技館</option>
+    </select>
+    </div>
+    <div style="display: inline-block; _display: inline;" text-align="center" class="kara">までの経路</div>
+
+    <input class="searchbtn click-down" type="submit"  value="検索">
+
+  </form>
+
+
+  {% if depselect == "出発地を選択" or desselect == "目的地を選択" %}
+  <p class="sentence">正しく選択されていません</p><br>
+  {% elif depselect == None and desselect == None %}
+  <p class="sentence">未選択</p>
+  {% else %}
+  <h4 class="station">{{ depselect }}</h4>から<h4 class="station">{{ desselect }}</h4>までの経路<br><br><br>
+  {% endif %}
+
+</div>
+
+
+<div class=contentsroute>
+  {% if depselect == "東京駅" %}
+
+  {% if desselect == "東京ドーム" %}
+  ●経路１
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/kanda">神田</a></h4>
+  <h4><a href="/result/ochanomizu">御茶ノ水</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>160円</p><p class=fee>11分</p><p class=fee>乗り換え1回</p>
+  <hr class=tt1><p class="routeleft">中央線快速</p><p class=tt1r>中央・総武線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/ochanomizu">淡路町</a></h4>
+  <h4><a href="/result/suidobashi">御茶ノ水</a></h4>
+  <h4><a href="/result/suidobashi">本郷三丁目</a></h4>
+  <h4><a href="/result/suidobashi">後楽園</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>170円</p><p class=fee>8分</p><p class=fee>乗り換え0回</p>
+  <hr class=tt2><p class="routeleft">東京メトロ丸ノ内線</p>
+
+
+  {% elif desselect == "幕張メッセ" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/hacchobori">八丁堀</a></h4>
+  <h4><a href="/result/ecchujima">越中島</a></h4>
+  <h4><a href="/result/shiomi">潮見</a></h4>
+  <h4><a href="/result/shinkiba">新木場</a></h4>
+  <h4><a href="/result/kasairinkaikoen">葛西臨海公園</a></h4>
+  <h4><a href="/result/maihama">舞浜</a></h4>
+  <h4><a href="/result/shinurayasu">新浦安</a></h4>
+  <h4><a href="/result/ichikawashiohama">市川塩浜</a></h4>
+  <h4><a href="/result/hutamatashincho">二俣新町</a></h4>
+  <h4><a href="/result/minamihunabashi">南船橋</a></h4>
+  <h4><a href="/result/shinnarashino">新習志野</a></h4>
+  <h4><a href="/result/kaihinmakuhari">海浜幕張</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>570円</p><p class=fee>36分</p><p class=fee>乗り換え0回</p>
+  <hr class=tm><p class="routeleft">京葉線</p>
+</ul></div>
+  {% elif desselect == "国立競技場" %}
+  ●経路１
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/kanda">神田</a></h4>
+  <h4><a href="/result/ochanomizu">御茶ノ水</a></h4>
+  <h4><a href="/result/yotsuya">四ツ谷</a></h4>
+  <h4><a href="/result/shinjuku">新宿</a></h4>
+  <h4><a href="/result/yoyogi">代々木</a></h4>
+  <h4><a href="/result/kokuritsukyougijyo">国立競技場</a></h4>
+  <h4>楽</h4>
+  <p class=fee>380円</p><p class=fee>26分</p><p class=fee>乗り換え1回</p>
+  <hr class=tk1>
+  <p class="routeleft">中央線快速</p><p class=tk1>都営大江戸線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/kanda">神田</a></h4>
+  <h4><a href="/result/ochanomizu">御茶ノ水</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4><a href="/result/iidabashi">飯田橋</a></h4>
+  <h4><a href="/result/ichigaya">市ヶ谷</a></h4>
+  <h4><a href="/result/yotsuya">四ツ谷</a></h4>
+  <h4><a href="/result/shinanomachi">信濃町</a></h4>
+  <h4><a href="/result/sendagaya">千駄ヶ谷</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>170円</p><p class=fee>24分</p><p class=fee>乗り換え1回</p>
+  <hr class=tk2>
+  <p class="routeleft">中央線快速</p><p class=tk2>中央・総武線</p>
+
+
+  {% elif desselect == "武道館" %}
+  ●経路１
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/jinbocho">神保町</a></h4>
+  <h4><a href="/result/kudanshita">九段下</a></h4>
+  <h4>早</h4><h4>安</h4>
+  <p class=fee>170円</p><p class=fee>10分</p><p class=fee>乗り換え1回</p>
+  <hr class=tb1>
+  <p class="routeleft">東京メトロ丸の内線</p><p class=tb1>東京メトロ半蔵門線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/takebashi">竹橋</a></h4>
+  <h4><a href="/result/kudanshita">九段下</a></h4>
+  <h4>安</h4>
+  <p class=fee>170円</p><p class=fee>15分</p><p class=fee>乗り換え1回</p>
+  <hr class=tb2>
+  <p class="routeleft">東京メトロ丸ノ内線</p><p class=tb2>東京メトロ東西線</p>
+
+  {% elif desselect == "東京国際フォーラム" %}
+  ●経路１
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>0円</p><p class=fee>乗り換え0回</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/yurakucho">有楽町</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>140円</p><p class=fee>2分</p><p class=fee>乗り換え0回</p>
+  <hr class=tf>
+  <p class="routeleft">山手線</p>
+
+  {% elif desselect == "両国国技館" %}
+  ●経路１
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/kanda">神田</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/asakusabashi">浅草橋</a></h4>
+  <h4><a href="/result/ryogoku">両国</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>160円</p><p class=fee>13分</p><p class=fee>乗り換え1回</p>
+  <hr class=tr1>
+  <p class="routeleft">山手線</p><p class=tr1>中央・総武線</p>
+
+  {% endif %}
+
+
+
+  {% elif depselect == "品川駅" %}
+
+  {% if desselect == "東京ドーム" %}
+  ●経路１
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/sengakuji">泉岳寺</a></h4>
+  <h4><a href="/result/mita">三田</a></h4>
+  <h4><a href="/result/shibakouen">芝公園</a></h4>
+  <h4><a href="/result/okachimachi">御成町</a></h4>
+  <h4><a href="/result/uchisaiwaicho">内幸町</a></h4>
+  <h4><a href="/result/hibiya">日比谷</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/jinbocho">神保町</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4>早</h4><h4>楽</h4>
+  <p class=fee>360円</p><p class=fee>21分</p><p class=fee>乗り換え1回</p>
+  <hr class=st1>
+  <p class="routeleft">京急本線</p><p class=st1>都営浅草線</p><p class=st11>都営三田線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/tamachi">田町</a></h4>
+  <h4><a href="/result/hamamatsucho">浜松町</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/yurakucho">有楽町</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/kanda">神田</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/ochanomizu">御茶ノ水</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4>安</h4><h4>楽</h4>
+  <p class=fee>200円</p><p class=fee>30分</p><p class=fee>乗り換え1回</p>
+  <hr class=st2>
+  <p class="routeleft">京浜東北線</p><p class=st2>中央・総武線</p>
+
+
+  {% elif desselect == "幕張メッセ" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/hacchobori">八丁堀</a></h4>
+  <h4><a href="/result/ecchujima">越中島</a></h4>
+  <h4><a href="/result/shiomi">潮見</a></h4>
+  <h4><a href="/result/shinkiba">新木場</a></h4>
+  <h4><a href="/result/kasairinkaikoen">葛西臨海公園</a></h4>
+  <h4><a href="/result/maihama">舞浜</a></h4>
+  <h4><a href="/result/shinurayasu">新浦安</a></h4>
+  <h4><a href="/result/ichikawashiohama">市川塩浜</a></h4>
+  <h4><a href="/result/hutamatashincho">二俣新町</a></h4>
+  <h4><a href="/result/minamihunabashi">南船橋</a></h4>
+  <h4><a href="/result/shinnarashino">新習志野</a></h4>
+  <h4><a href="/result/kaihinmakuhari">海浜幕張</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>650円</p><p class=fee>1時間7分</p><p class=fee>乗り換え1回</p>
+  <hr class=sm>
+  <p class="routeleft">横須賀線</p><p class=sm>京葉線</p>
+  <br><br><br><br>
+  </ul></div>
+
+
+  {% elif desselect == "国立競技場" %}
+  ●経路１
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/sengakuji">泉岳寺</a></h4>
+  <h4><a href="/result/mita">三田</a></h4>
+  <h4><a href="/result/daimon">大門</a></h4>
+  <h4><a href="/result/akabanebashi">赤羽橋</a></h4>
+  <h4><a href="/result/azabujyuban">麻布十番</a></h4>
+  <h4><a href="/result/roppongi">六本木</a></h4>
+  <h4><a href="/result/aoyamaicchome">青山一丁目</a></h4>
+  <h4><a href="/result/kokuritsukyougijyo">国立競技場</a></h4>
+  <h4>早</h4><h4>楽</h4>
+  <p class=fee>360円</p><p class=fee>26分</p><p class=fee>乗り換え1回</p>
+  <hr class=sk1>
+  <p class="routeleft">京急本線</p><p class=sk1>都営浅草線</p><p class=sk11>都営大江戸線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/osaki">大崎</a></h4>
+  <h4><a href="/result/gotanda">五反田</a></h4>
+  <h4><a href="/result/meguro">目黒</a></h4>
+  <h4><a href="/result/ebisu">恵比寿</a></h4>
+  <h4><a href="/result/shibuya">渋谷</a></h4>
+  <h4><a href="/result/harajuku">原宿</a></h4>
+  <h4><a href="/result/yoyogi">代々木</a></h4>
+  <h4><a href="/result/kokuritsukyougijyo">国立競技場</a></h4>
+  <h4>早</h4><h4>楽</h4>
+  <p class=fee>350円</p><p class=fee>25分</p><p class=fee>乗り換え1回</p>
+  <hr class=sk2>
+  <p class="routeleft">山手線</p><p class=sk2>都営大江戸線</p>
+  <br><br><br><br>
+  ●経路３
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/osaki">大崎</a></h4>
+  <h4><a href="/result/gotanda">五反田</a></h4>
+  <h4><a href="/result/meguro">目黒</a></h4>
+  <h4><a href="/result/ebisu">恵比寿</a></h4>
+  <h4><a href="/result/shibuya">渋谷</a></h4>
+  <h4><a href="/result/harajuku">原宿</a></h4>
+  <h4><a href="/result/yoyogi">代々木</a></h4>
+  <h4><a href="/result/sendagaya">千駄ヶ谷</a></h4>
+  <h4>早</h4><h4>楽</h4>
+  <p class=fee>200円</p><p class=fee>34分</p><p class=fee>乗り換え1回</p>
+  <hr class=sk3>
+  <p class="routeleft">山手線</p><p class=sk3>中央・総武線</p>
+
+  {% elif desselect == "武道館" %}
+  ●経路１
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/takebashi">竹橋</a></h4>
+  <h4><a href="/result/kudanshita">九段下</a></h4>
+  <h4>早</h4><h4>安</h4>
+  <p class=fee>350円</p><p class=fee>29分</p><p class=fee>乗り換え2回</p>
+  <hr class=sb1>
+  <p class="routeleft">上野東京ライン</p><p class=sb1>東京メトロ丸ノ内線</p><p class=sb11>東京メトロ東西線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/osaki">大崎</a></h4>
+  <h4><a href="/result/gotanda">五反田</a></h4>
+  <h4><a href="/result/meguro">目黒</a></h4>
+  <h4><a href="/result/ebisu">恵比寿</a></h4>
+  <h4><a href="/result/shibuya">渋谷</a></h4>
+  <h4><a href="/result/omotesando">表参道</a></h4>
+  <h4><a href="/result/aoyamaicchome">青山一丁目</a></h4>
+  <h4><a href="/result/nagatacho">永田町</a></h4>
+  <h4><a href="/result/hanzomon">半蔵門</a></h4>
+  <h4><a href="/result/kudanshita">九段下</a></h4>
+  <h4>楽</h4>
+  <p class=fee>370円</p><p class=fee>36分</p><p class=fee>乗り換え1回</p>
+  <hr class=sb2>
+  <p class="routeleft">山手線</p><p class=sb2>東京メトロ半蔵門線</p>
+  <br><br><br><br>
+
+  {% elif desselect == "東京国際フォーラム" %}
+  ●経路１
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>170円</p><p class=fee>9分</p><p class=fee>乗り換え0回</p>
+  <hr class=sf1>
+  <p class="routeleft">上野東京ライン</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/tamachi">田町</a></h4>
+  <h4><a href="/result/hamamatsucho">浜松町</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/yurakucho">有楽町</a></h4>
+  <h4>安</h4><h4>楽</h4>
+  <p class=fee>170円</p><p class=fee>13分</p><p class=fee>乗り換え0回</p>
+  <hr class=sf2>
+  <p class="routeleft">山手線</p>
+
+  {% elif desselect == "両国国技館" %}
+  ●経路１
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/tamachi">田町</a></h4>
+  <h4><a href="/result/hamamatsucho">浜松町</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/yurakucho">有楽町</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/kanda">神田</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/asakusabashi">浅草橋</a></h4>
+  <h4><a href="/result/ryogoku">両国</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>220円</p><p class=fee>24分</p><p class=fee>乗り換え1回</p>
+  <hr class=sr>
+  <p class="routeleft">山手線</p><p class=sr>中央・総武線</p>
+
+  {% endif %}
+
+
+
+  {% elif depselect == "羽田空港国内線ターミナル駅" %}
+
+  {% if desselect == "東京ドーム" %}
+  <div class="scroll">
+    <ul>
+  ●経路１
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/tenkubashi">天空橋</a></h4>
+  <h4><a href="/result/anamoriinari">穴守稲荷</a></h4>
+  <h4><a href="/result/ootorii">大鳥居</a></h4>
+  <h4><a href="/result/koujiya">糀谷</a></h4>
+  <h4><a href="/result/keikyukamata">京急蒲田</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/sengakuji">泉岳寺</a></h4>
+  <h4><a href="/result/mita">三田</a></h4>
+  <h4><a href="/result/shibakouen">芝公園</a></h4>
+  <h4><a href="/result/okachimachi">御成町</a></h4>
+  <h4><a href="/result/uchisaiwaicho">内幸町</a></h4>
+  <h4><a href="/result/hibiya">日比谷</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/jinbocho">神保町</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4>早</h4><h4>安</h4>
+  <p class=fee>500円</p><p class=fee>41分</p><p class=fee>乗り換え1回</p>
+  <hr class=ht>
+  <p class="routeleft">京急本線</p><p class=ht>都営浅草線</p><p class=htt>都営三田線</p>
+  </ul>
+  </div>
+
+  {% elif desselect == "幕張メッセ" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/hanedakokunai">羽田国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田国際線ターミナル</a></h4>
+  <h4><a href="/result/keikyukamata">京急蒲田</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/hacchobori">八丁堀</a></h4>
+  <h4><a href="/result/ecchujima">越中島</a></h4>
+  <h4><a href="/result/shiomi">潮見</a></h4>
+  <h4><a href="/result/shinkiba">新木場</a></h4>
+  <h4><a href="/result/kasairinkaikoen">葛西臨海公園</a></h4>
+  <h4><a href="/result/maihama">舞浜</a></h4>
+  <h4><a href="/result/shinurayasu">新浦安</a></h4>
+  <h4><a href="/result/ichikawashiohama">市川塩浜</a></h4>
+  <h4><a href="/result/hutamatashincho">二俣新町</a></h4>
+  <h4><a href="/result/minamihunabashi">南船橋</a></h4>
+  <h4><a href="/result/shinnarashino">新習志野</a></h4>
+  <h4><a href="/result/kaihinmakuhari">海浜幕張</a></h4>
+  <h4>安</h4>
+  <p class=fee>950円</p><p class=fee>1時間13分</p><p class=fee>乗り換え2回</p>
+  <hr class=hm1>
+  <p class="routeleft">京急本線</p><p class=hm1>上野東京ライン</p><p class=hm11>京葉線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/hanedakokunai">羽田国内線ターミナル</a></h4>
+  <h4><a href="/result/kaihinmakuhari">海浜幕張</a></h4>
+  <h4>早</h4><h4>楽</h4>
+  <p class=fee>1200円</p><p class=fee>49分</p><p class=fee>乗り換え0回</p>
+  <hr class=hm2>
+  <p class="routeleft">羽田空港線(バス)</p>
+  </ul>
+  </div>
+
+  {% elif desselect == "国立競技場" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/keikyukamata">京急蒲田</a></h4>
+  <h4><a href="/result/sengakuji">泉岳寺</a></h4>
+  <h4><a href="/result/mita">三田</a></h4>
+  <h4><a href="/result/daimon">大門</a></h4>
+  <h4><a href="/result/akabanebashi">赤羽橋</a></h4>
+  <h4><a href="/result/azabujyuban">麻布十番</a></h4>
+  <h4><a href="/result/roppongi">六本木</a></h4>
+  <h4><a href="/result/aoyamaicchome">青山一丁目</a></h4>
+  <h4><a href="/result/kokuritsukyougijyo">国立競技場</a></h4>
+  <h4>早</h4><h4>楽</h4><h4>安</h4>
+  <p class=fee>500円</p><p class=fee>38分</p><p class=fee>乗り換え1回</p>
+  <hr class=hk1>
+  <p class="routeleft">京急本線</p><p class=hk1>都営浅草線</p><p class=hk11>都営大江戸線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/keikyukamata">京急蒲田</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/osaki">大崎</a></h4>
+  <h4><a href="/result/gotanda">五反田</a></h4>
+  <h4><a href="/result/meguro">目黒</a></h4>
+  <h4><a href="/result/ebisu">恵比寿</a></h4>
+  <h4><a href="/result/shibuya">渋谷</a></h4>
+  <h4><a href="/result/harajuku">原宿</a></h4>
+  <h4><a href="/result/yoyogi">代々木</a></h4>
+  <h4><a href="/result/sendagaya">千駄ヶ谷</a></h4>
+  <h4>安</h4>
+  <p class=fee>500円</p><p class=fee>56分</p><p class=fee>乗り換え2回</p>
+  <hr class=hk2>
+  <p class="routeleft">京急本線</p><p class=hk2>山手線</p><p class=hk22>中央・総武線</p>
+</ul>
+</div>
+
+
+  {% elif desselect == "武道館" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/keikyukamata">京急蒲田</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/sengakuji">泉岳寺</a></h4>
+  <h4><a href="/result/mita">三田</a></h4>
+  <h4><a href="/result/daimon">大門</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/higashiginza">東銀座</a></h4>
+  <h4><a href="/result/takaracho">宝町</a></h4>
+  <h4><a href="/result/nihonbashi">日本橋</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/takebashi">竹橋</a></h4>
+  <h4><a href="/result/kudanshita">九段下</a></h4>
+  <h4>早</h4>
+  <p class=fee>620円</p><p class=fee>41分</p><p class=fee>乗り換え1回</p>
+  <hr class=hb1>
+  <p class="routeleft">京急本線</p><p class=hb1>都営浅草線</p><p class=hb11>東京メトロ東西線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/keikyukamata">京急蒲田</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/sengakuji">泉岳寺</a></h4>
+  <h4><a href="/result/mita">三田</a></h4>
+  <h4><a href="/result/daimon">大門</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/higashiginza">東銀座</a></h4>
+  <h4><a href="/result/takaracho">宝町</a></h4>
+  <h4><a href="/result/nihonbashi">日本橋</a></h4>
+  <h4><a href="/result/ningyocho">人形町</a></h4>
+  <h4><a href="/result/higashinihonbashi">東日本橋</a></h4>
+  <h4><a href="/result/bakuroyokoyama">馬喰横山</a></h4>
+  <h4><a href="/result/iwamotocho">岩本町</a></h4>
+  <h4><a href="/result/ogawacho">小川町</a></h4>
+  <h4><a href="/result/jinbocho">神保町</a></h4>
+  <h4><a href="/result/kudanshita">九段下</a></h4>
+  <h4>安</h4>
+  <p class=fee>500円</p><p class=fee>49分</p><p class=fee>乗り換え1回</p>
+  <hr class=hb2>
+  <p class="routeleft">京急本線</p><p class=hb2>都営浅草線</p><p class=hb22>都営新宿線</p>
+
+  </ul>
+  </div>
+  {% elif desselect == "東京国際フォーラム" %}
+  ●経路１
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/keikyukamata">京急蒲田</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/tamachi">新橋</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4>早</h4><h4>安</h4>
+  <p class=fee>470円</p><p class=fee>31分</p><p class=fee>乗り換え1回</p>
+  <hr class=hf1>
+  <p class="routeleft">京急本線</p><p class=hf1>横須賀線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/tamachi">田町</a></h4>
+  <h4><a href="/result/hamamatsucho">浜松町</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/yurakucho">有楽町</a></h4>
+  <h4>早</h4><h4>安</h4>
+  <p class=fee>460円</p><p class=fee>31分</p><p class=fee>乗り換え1回</p>
+  <hr class=hf2>
+  <p class="routeleft">京急本線</p><p class=hf2>山手線</p>
+
+
+  {% elif desselect == "両国国技館" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/tamachi">田町</a></h4>
+  <h4><a href="/result/hamamatsucho">浜松町</a></h4>
+  <h4><a href="/result/shinbashi">新橋</a></h4>
+  <h4><a href="/result/yurakucho">有楽町</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4><a href="/result/kanda">神田</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/asakusabashi">浅草橋</a></h4>
+  <h4><a href="/result/ryogoku">両国</a></h4>
+  <h4>早</h4><h4>安</h4>
+  <p class=fee>520円</p><p class=fee>42分</p><p class=fee>乗り換え2回</p>
+  <hr class=hr1>
+  <p class="routeleft">京急本線</p><p class=hr1>山手線</p><p class=hr11>中央・総武線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/hanedakokunai">羽田空港国内線ターミナル</a></h4>
+  <h4><a href="/result/hanedakokusai">羽田空港国際線ターミナル</a></h4>
+  <h4><a href="/result/shinagawa">品川</a></h4>
+  <h4><a href="/result/sengakuji">泉岳寺</a></h4>
+  <h4><a href="/result/mita">三田</a></h4>
+  <h4><a href="/result/daimon">大門</a></h4>
+  <h4><a href="/result/shiodome">汐留</a></h4>
+  <h4><a href="/result/tsukidisijyo">築地市場</a></h4>
+  <h4><a href="/result/kachidoki">勝どき</a></h4>
+  <h4><a href="/result/tsukishima">月島</a></h4>
+  <h4><a href="/result/monzennakamachi">門前仲町</a></h4>
+  <h4><a href="/result/kiyosumishirakawa">清澄白河</a></h4>
+  <h4><a href="/result/morishita">森下</a></h4>
+  <h4><a href="/result/ryogoku">両国</a></h4>
+  <h4>楽</h4>
+  <p class=fee>560円</p><p class=fee>49分</p><p class=fee>乗り換え1回</p>
+  <hr class=hr2>
+  <p class="routeleft">京急本線</p><p class=hr2>都営浅草線</p><p class=hr22>都営大江戸線</p>
+
+  </ul>
+  </div>
+  {% endif %}
+
+
+
+  {% elif depselect == "成田空港駅" %}
+
+  {% if desselect == "東京ドーム" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/nippori">日暮里</a></h4>
+  <h4><a href="/result/uguisudani">鶯谷</a></h4>
+  <h4><a href="/result/ueno">上野</a></h4>
+  <h4><a href="/result/okachimachi">御徒町</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/ochanomizu">御茶ノ水</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4>早</h4>
+  <p class=fee>2680円</p><p class=fee>1時間7分</p><p class=fee>乗り換え2回</p>
+  <hr class=nt1>
+  <p class="routeleft">スカイライナー</p><p class=nt1>山手線</p><p class=nt11>中央・総武線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/narita">成田</a></h4>
+  <h4><a href="/result/shisui">酒々井</a></h4>
+  <h4><a href="/result/sakura">佐倉</a></h4>
+  <h4><a href="/result/monoi">物井</a></h4>
+  <h4><a href="/result/yotsukaidou">四街道</a></h4>
+  <h4><a href="/result/tsuga">都賀</a></h4>
+  <h4><a href="/result/chiba">千葉</a></h4>
+  <h4><a href="/result/nishichiba">西千葉</a></h4>
+  <h4><a href="/result/inage">稲毛</a></h4>
+  <h4><a href="/result/shinkemigawa">新検見川</a></h4>
+  <h4><a href="/result/makuhari">幕張</a></h4>
+  <h4><a href="/result/makuharihongou">幕張本郷</a></h4>
+  <h4><a href="/result/tsudanuma">津田沼</a></h4>
+  <h4><a href="/result/hunabashi">船橋</a></h4>
+  <h4><a href="/result/nishihunabashi">西船橋</a></h4>
+  <h4><a href="/result/shimousanakayama">下総中山</a></h4>
+  <h4><a href="/result/honyahata">本八幡</a></h4>
+  <h4><a href="/result/ichikawa">市川</a></h4>
+  <h4><a href="/result/koiwa">小岩</a></h4>
+  <h4><a href="/result/shinkoiwa">新小岩</a></h4>
+  <h4><a href="/result/hirai">平井</a></h4>
+  <h4><a href="/result/kameido">亀戸</a></h4>
+  <h4><a href="/result/kinshicho">錦糸町</a></h4>
+  <h4><a href="/result/ryogoku">両国</a></h4>
+  <h4><a href="/result/asakusabashi">浅草橋</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/ochanomizu">御茶ノ水</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4>安</h4>
+  <p class=fee>1340円</p><p class=fee>1時間50分</p><p class=fee>乗り換え1回</p>
+  <hr class=nt2>
+  <p class="routeleft">成田線</p><p class=nt2>中央・総武線</p>
+  </ul></div>
+
+  {% elif desselect == "幕張メッセ" %}
+  ●経路１
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kaihinmakuhari">海浜幕張</a></h4>
+  <h4>早</h4><h4>安</h4><h4>楽</h4>
+  <p class=fee>1000円</p><p class=fee>48分</p><p class=fee>乗り換え0回</p>
+  <hr class=nm>
+  <p class="routeleft">成田空港線(バス)</p>
+
+
+  {% elif desselect == "国立競技場" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/nippori">日暮里</a></h4>
+  <h4><a href="/result/uguisudani">鶯谷</a></h4>
+  <h4><a href="/result/ueno">上野</a></h4>
+  <h4><a href="/result/okachimachi">御徒町</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/ochanomizu">御茶ノ水</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4><a href="/result/iidabashi">飯田橋</a></h4>
+  <h4><a href="/result/ichigaya">市ヶ谷</a></h4>
+  <h4><a href="/result/yotsuya">四ツ谷</a></h4>
+  <h4><a href="/result/shinanomachi">信濃町</a></h4>
+  <h4><a href="/result/sendagaya">千駄ヶ谷</a></h4>
+  <h4>早</h4>
+  <p class=fee>2720円</p><p class=fee>1時間13分</p><p class=fee>乗り換え2回</p>
+  <hr class=nk1>
+  <p class="routeleft">スカイライナー</p><p class=nk1>山手線</p><p class=nkk>中央・総武線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/keiseinarita">京成成田</a></h4>
+  <h4><a href="/result/koudunomori">公津の杜</a></h4>
+  <h4><a href="/result/sougosando">宗吾参道</a></h4>
+  <h4><a href="/result/keiseishisui">京成酒々井</a></h4>
+  <h4><a href="/result/oosakura">大佐倉</a></h4>
+  <h4><a href="/result/keiseisakura">京成佐倉</a></h4>
+  <h4><a href="/result/katsutadai">勝田台</a></h4>
+  <h4><a href="/result/yachiyodai">八千代台</a></h4>
+  <h4><a href="/result/keiseitudanuma">京成津田沼</a></h4>
+  <h4><a href="/result/keiseihunabashi">京成船橋</a></h4>
+  <h4><a href="/result/keiseiyahata">京成八幡</a></h4>
+  <h4><a href="/result/keiseitakasago">京成高砂</a></h4>
+  <h4><a href="/result/aoto">青砥</a></h4>
+  <h4><a href="/result/keiseitateishi">京成立石</a></h4>
+  <h4><a href="/result/yotsugi">四ツ木</a></h4>
+  <h4><a href="/result/yahiro">八広</a></h4>
+  <h4><a href="/result/keiseihikihune">京成曳舟</a></h4>
+  <h4><a href="/result/oshiage">押上</a></h4>
+  <h4><a href="/result/honjoaduma">本所吾妻橋</a></h4>
+  <h4><a href="/result/asakusa">浅草</a></h4>
+  <h4><a href="/result/kuramae">蔵前</a></h4>
+  <h4><a href="/result/asakusabashi">浅草橋</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/ochanomizu">御茶ノ水</a></h4>
+  <h4><a href="/result/suidobashi">水道橋</a></h4>
+  <h4><a href="/result/iidabashi">飯田橋</a></h4>
+  <h4><a href="/result/ichigaya">市ヶ谷</a></h4>
+  <h4><a href="/result/yotsuya">四ツ谷</a></h4>
+  <h4><a href="/result/shinanomachi">信濃町</a></h4>
+  <h4><a href="/result/sendagaya">千駄ヶ谷</a></h4>
+  <h4>安</h4>
+  <p class=fee>1280円</p><p class=fee>1時間48分</p><p class=fee>乗り換え2回</p>
+  <hr class=nk2>
+  <p class="routeleft">京成本線</p><p class=nk2>都営浅草線</p><p class=nk22>中央・総武線</p>
+  </ul></div>
+
+
+  {% elif desselect == "武道館" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/nippori">日暮里</a></h4>
+  <h4><a href="/result/keiseiueno">京成上野</a></h4>
+  <h4><a href="/result/ueno">上野</a></h4>
+  <h4><a href="/result/uenohirokouji">上野広小路</a></h4>
+  <h4><a href="/result/suehirocho">末広町</a></h4>
+  <h4><a href="/result/kanda">神田</a></h4>
+  <h4><a href="/result/mitsukoshimae">三越前</a></h4>
+  <h4><a href="/result/nihonbashi">日本橋</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/jinbocho">神保町</a></h4>
+  <h4><a href="/result/kudanshita">九段下</a></h4>
+  <h4>早</h4>
+  <p class=fee>2690円</p><p class=fee>1時間13分</p><p class=fee>乗り換え2回</p>
+  <hr class=nb1>
+  <p class="routeleft">スカイライナー</p><p class=nb1>東京メトロ銀座線</p><p class=nb11>東京メトロ東西線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/keiseinarita">京成成田</a></h4>
+  <h4><a href="/result/koudunomori">公津の杜</a></h4>
+  <h4><a href="/result/sougosando">宗吾参道</a></h4>
+  <h4><a href="/result/keiseishisui">京成酒々井</a></h4>
+  <h4><a href="/result/oosakura">大佐倉</a></h4>
+  <h4><a href="/result/keiseisakura">京成佐倉</a></h4>
+  <h4><a href="/result/katsutadai">勝田台</a></h4>
+  <h4><a href="/result/yachiyodai">八千代台</a></h4>
+  <h4><a href="/result/keiseitudanuma">京成津田沼</a></h4>
+  <h4><a href="/result/yatsu">谷津</a></h4>
+  <h4><a href="/result/hunabashikeibajyo">船橋競馬場</a></h4>
+  <h4><a href="/result/daijingushita">大神宮下</a></h4>
+  <h4><a href="/result/keiseihunabashi">京成船橋</a></h4>
+  <h4><a href="/result/kaijin">海神</a></h4>
+  <h4><a href="/result/keiseinishihuna">京成西船</a></h4>
+  <h4><a href="/result/nishihunabashi">西船橋</a></h4>
+  <h4><a href="/result/urayasu">浦安</a></h4>
+  <h4><a href="/result/touyoucho">東陽町</a></h4>
+  <h4><a href="/result/kiba">木場</a></h4>
+  <h4><a href="/result/monzennakamachi">門前仲町</a></h4>
+  <h4><a href="/result/kayabacho">茅場町</a></h4>
+  <h4><a href="/result/nihonbashi">日本橋</a></h4>
+  <h4><a href="/result/ootemachi">大手町</a></h4>
+  <h4><a href="/result/takebashi">竹橋</a></h4>
+  <h4><a href="/result/kudanshita">九段下</a></h4>
+  <h4>安</h4>
+  <p class=fee>1100円</p><p class=fee>1時間39分</p><p class=fee>乗り換え2回</p>
+  <hr class=nb2>
+  <p class="routeleft">京成本線</p><p class=nb2>東京メトロ東西線</p>
+  </ul></div>
+
+
+  {% elif desselect == "東京国際フォーラム" %}
+  ●経路１
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4>早</h4><h4>楽</h4>
+  <p class=fee>3070円</p><p class=fee>1時間2分</p><p class=fee>乗り換え0回</p>
+  <hr class=nf1>
+  <p class="routeleft">成田エクスプレス</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/tokyo">東京</a></h4>
+  <h4>安</h4><h4>楽</h4>
+  <p class=fee>1000円</p><p class=fee>1時間38分</p><p class=fee>乗り換え2回</p>
+  <hr class=nf2>
+  <p class="routeleft">THEアクセス成田(バス)　または　東京シャトル</p>
+
+
+  {% elif desselect == "両国国技館" %}
+  <div class="scroll">
+  <ul>
+  ●経路１
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/nippori">日暮里</a></h4>
+  <h4><a href="/result/uguisudani">鶯谷</a></h4>
+  <h4><a href="/result/ueno">上野</a></h4>
+  <h4><a href="/result/okachimachi">御徒町</a></h4>
+  <h4><a href="/result/akihabara">秋葉原</a></h4>
+  <h4><a href="/result/asakusabashi">浅草橋</a></h4>
+  <h4><a href="/result/ryogoku">両国</a></h4>
+  <h4>早</h4>
+  <p class=fee>2680円</p><p class=fee>時間分</p><p class=fee>乗り換え回</p>
+  <hr class=nr1>
+  <p class="routeleft">スカイライナー</p><p class=nr1>山手線</p><p class=nr11>中央・総武線</p>
+  <br><br><br><br>
+  ●経路２
+  <h4><a href="/result/naritakuko">成田空港</a></h4>
+  <h4><a href="/result/kukodainibiru">空港第２ビル</a></h4>
+  <h4><a href="/result/narita">成田</a></h4>
+  <h4><a href="/result/shisui">酒々井</a></h4>
+  <h4><a href="/result/sakura">佐倉</a></h4>
+  <h4><a href="/result/monoi">物井</a></h4>
+  <h4><a href="/result/yotsukaidou">四街道</a></h4>
+  <h4><a href="/result/tsuga">都賀</a></h4>
+  <h4><a href="/result/chiba">千葉</a></h4>
+  <h4><a href="/result/inage">稲毛</a></h4>
+  <h4><a href="/result/tsudanuma">津田沼</a></h4>
+  <h4><a href="/result/hunabashi">船橋</a></h4>
+  <h4><a href="/result/ichikawa">市川</a></h4>
+  <h4><a href="/result/shinkoiwa">新小岩</a></h4>
+  <h4><a href="/result/kinshicho">錦糸町</a></h4>
+  <h4><a href="/result/ryogoku">両国</a></h4>
+  <h4>安</h4><h4>楽</h4>
+  <p class=fee>1340円</p><p class=fee>1時間2分</p><p class=fee>乗り換え2回</p>
+  <hr class=nr2>
+  <p class="routeleft">成田線</p><p class=nr2>総武線</p><p class=nr22>中央・総武線</p>
+  </ul>
+  </div>
+  {% endif %}
+  {% endif %}
+</div>
+
+<footer class="page-footer"><br></footer>
+  {% endblock %}
+</body>
+</html>

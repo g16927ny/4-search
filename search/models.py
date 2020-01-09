@@ -1,21 +1,20 @@
+
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
-
+from django.core.validators import MinValueValidator
 
 
 class Hotel(models.Model):
-    hotelname = models.CharField(max_length=20)
+    hotelname = models.CharField(max_length=40)
+    hotelurl = models.URLField(blank=True)
+    womanonly = models.CharField(max_length=3,default='')
+    twosites = models.CharField(max_length=3,default='')
     nearstation = models.CharField(max_length=10)
-    #hotelurl = models.TextField(max_length=200)
-    #hotelurl = models.URLField(unique=True)
-    #created_date = models.DateTimeField(default=timezone.now)
-    #published_date = models.DateTimeField(blank=True, null=True)
+    hotelprice = models.IntegerField(blank=True, validators=[MinValueValidator(1)])
 
     def publish(self):
-        #self.published_date = timezone.now()
         self.save()
 
     def __str__(self):
         return self.hotelname
-# Create your models here.
